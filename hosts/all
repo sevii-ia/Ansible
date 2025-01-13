@@ -1,0 +1,5 @@
+[linux]
+linux_host ansible_host=192.168.1.207 ansible_user=ubuntu ansible_password=ubuntu
+
+[windows]
+windows_host ansible_host=192.168.1.211 ansible_user=admin ansible_password=Qwerty ansible_port=5986 ansible_connection=winrm ansible_winrm_server_cert_validation=ignore

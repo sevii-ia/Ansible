@@ -1,0 +1,28 @@
+---
+- name: Install software based on OS
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - block:
+        - name: Install MC on Linux
+          apt:
+            name: mc
+            state: present
+        - name: Install Nano on Linux
+          apt:
+            name: nano
+            state: present
+      when: ansible_os_family == "Debian"
+      become: yes  # Виконання з підвищеними правами для Linux
+
+    - block:
+        - name: Install Chrome on Windows
+          win_chocolatey:
+            name: googlechrome
+            state: present
+        - name: Install Firefox on Windows
+          win_chocolatey:
+            name: firefox
+            state: present
+      when: ansible_os_family == "Windows"
+      become: no  # Відключення підвищених прав для Windows

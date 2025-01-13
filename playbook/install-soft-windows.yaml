@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Mozilla-Firefox
+    win_chocolatey:
+      name: firefox
+      state: present

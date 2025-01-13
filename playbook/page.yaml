@@ -1,0 +1,11 @@
+---
+- name: replace text in file
+  hosts: my
+
+  tasks:
+
+    - name: replace text
+      replace:
+        path: /var/www/html/index.html
+        regexp: '<title>Welcome to nginx!</title>'
+        replace: '<title>Vsevolod Zyabkin!</title>'

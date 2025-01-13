@@ -1,0 +1,11 @@
+---
+- name: install soft
+  hosts: all
+  become: no
+
+  tasks:
+
+  - name: install MC
+    apt:
+      name: mc
+      state: present
