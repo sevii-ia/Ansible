@@ -39,11 +39,3 @@ Ansible/
    ```sh
    ansible-playbook -i inventory/hosts playbooks/setup.yml
    ```
-
-## Ліцензія
-
-Цей проект ліцензовано під MIT License. Докладніше в файлі [LICENSE](LICENSE).
-
-## Автор
-
-[Всеволод](https://github.com/sevii-ia)
